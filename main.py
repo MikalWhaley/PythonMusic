@@ -1,15 +1,16 @@
 import requests
+import json
+from key import key
+
 # Misuxmatch API linked to track.search method
+trackSearch = "https://api.musixmatch.com/ws/1.1/track.search?format=jsonp&callback=callback&q_lyrics=we%20will%20rock%20you&quorum_factor=1" 
 
-trackSearch = “https://api.musixmatch.com/ws/1.1/track.search?format=jsonp&callback=callback&q_lyrics=we%20will%20rock%20you&quorum_factor=1”
-response = requests.request(“GET”, trackSearch+apikey)
+# response = requests.get(trackSearch+apikey)
+response = requests.request("GET", trackSearch+key)
+print("Musixmatch lyrics API call: " + trackSearch+key + "\n")
 
-print(“Musixmatch lyrics API call: ” + trackSearch+apikey + “\n”)
 print(response.status_code)
-
-# data = response.json()
-json_data = json.loads(response.text)
-print(data)
-
-
-# https://api.musixmatch.com/ws/1.1/track.search?format=jsonp&callback=callback&q_lyrics=look%20at%20the%20stars&quorum_factor=1&apikey=7b84213fea9c34461c806226403d9989
+# Gets rid of 'callback()' that was included in the api callback
+responseText = response.text[9:-2]
+json_data = json.loads(responseText)
+print(json_data)
