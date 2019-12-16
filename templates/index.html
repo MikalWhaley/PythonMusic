@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PYTHON MUSIC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<style>
+       h1{
+        right:10px;
+         font-size:80px;
+         position:absolute; bottom:500px; left:10px; right:10px;
+         color: white;
+         
+       }
+       body {
+           background-image: url(https://i.pinimg.com/originals/0b/a8/df/0ba8dfceaa16c47b713cbed42c1e6b34.jpg);
+           background-repeat: no-repeat;
+           background-size: 100% 1000%;
+       }
+       <font face = "Comic sans MS" size =" 5">Comic Sans MS</font><br />
+       #decrypt {
+         font-size:25px;
+         position:absolute; bottom:8px; left:10px; right:10px;
+         color:rgb(173, 14, 8);
+       }
+       #Text {
+         position:absolute; bottom:360px; left:500px; right:10px;
+         font-size:25px;
+         text-align:center;
+       }
+       a:link {
+        color:rgb(7, 36, 142);
+       }
+       a:visited{
+         color: black;
+       }
+       #description {
+         position:absolute; bottom:450px; left:10px; right:10px;
+         color:white;
+         font-size:30px;
+       }
+</style>
+</head>
+<body>
+<center>
+  <h1>PYTHON MUSIC</h1>
+    <p id="description"> Looking to find a song? Enter some lyrics and you're all set!</p>
+  <form method = POST action = "{{ url_for('my_form_post') }}" style="margin-bottom: 25px;">
+      <!--Enter Message <br>-->
+      <!--<input type = "text" name = "message" value = "Input message here"><br>-->
+      <!--<label for="user">user</label>-->
+      <input type="text" name="message" id = Text size = "40";
+      onfocus="if(this.value==this.defaultValue)this.value=''"    
+      onblur="if(this.value=='')this.value=this.defaultValue" 
+      value="Enter choice of lyrics here"> <br>
+      <!--<select name = "type">-->
+      <!--    <option value="caesar">Caesar</option>-->
+      <!--    <option value="atbash">ATBASH</option>-->
+      <!--</select><br>-->
+      <!--<input type = "radio" name = "encrypt" value = "encrypt">Encrypt</input>-->
+      <!--<input type = "radio" name = "encrypt" value = "decrypt">    Decrypt<br>-->
+      <input type="submit" name="Encrypt Your Message" style="position:relative; top:535px; left: 50px;">
+      
+      <!--<p id ="decrypt">Looking for the decryption page?? -->
+      <!-- <a href="/decrypt">Click Here</a></p> -->
+  </form>
+  </center>
+<br>
+  <!--<section>-->
+ 
+  <!--</section>-->
+  <!--<section>-->
+  <!--  <h2></h2>-->
+  <!--</section>-->
+</body>
+</html>
