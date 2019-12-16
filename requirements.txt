@@ -1,0 +1,5 @@
+Pillow
+flask
+flask-bootstrap
+Flask-WTF
+requests
