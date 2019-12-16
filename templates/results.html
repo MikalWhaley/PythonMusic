@@ -56,9 +56,9 @@
 
       <p style="color: black; position: absolute; left: 300px; top: 200px">{{album_names[0]}} </p>
 
-      <a href="https://en.wikipedia.org/wiki/News_of_the_World_(album)">
+      <a href="{{ url_for('lyrics', track=track_id[0])}}">
 
-      <img src="{{cover_art[0]}}" alt="Queen" width="150" height="150" style="position: absolute; left: 300px; top: 250px;">
+      <img src="{{cover_art[0]}}" alt="{{album_names[0]}}" width="150" height="150" style="position: absolute; left: 300px; top: 250px;">
       </a>
 
       <p1 style="position: absolute; left: 300px; top: 400px">{{song_names[0]}}</p1>
@@ -67,8 +67,8 @@
 
       <!-- album 2 -->
       <p style="color: black; position: absolute; left: 650px; top: 200px">{{album_names[1]}} </p>
-      <a href="https://en.wikipedia.org/wiki/News_of_the_World_(album)">
-      <img src="{{cover_art[1]}}" alt="Queen" width="150" height="150" style="position: absolute; left: 650px; top: 250px;">
+      <a href="{{ url_for('lyrics', track=track_id[1])}}">
+      <img src="{{cover_art[1]}}" alt="{{album_names[1]}}" width="150" height="150" style="position: absolute; left: 650px; top: 250px;">
 
       </a>
 
@@ -78,8 +78,8 @@
 
       <!-- album 3 -->
       <p style="color: black; position: absolute; left: 1000px; top: 200px">{{album_names[2]}} </p>
-      <a href="https://en.wikipedia.org/wiki/News_of_the_World_(album)">
-      <img src="{{cover_art[2]}}" alt="Queen" width="150" height="150" style="position: absolute; left: 1000px; top: 250px;">
+      <a href="{{ url_for('lyrics', track=track_id[2])}}">
+      <img src="{{cover_art[2]}}" alt="{{album_names[2]}}" width="150" height="150" style="position: absolute; left: 1000px; top: 250px;">
       </a>
       <p1 style="position: absolute; left: 1000px; top: 400px">{{song_names[2]}}</p1>
       <p2 style="position: absolute; left: 1000px; top: 420px">{{artist_names[2]}}</p2>
@@ -87,24 +87,24 @@
       <!-- album 4 -->
       <p style="color: black; position: absolute; left: 300px; top: 500px">{{album_names[3]}} </p>
 
-      <a href="https://en.wikipedia.org/wiki/News_of_the_World_(album)">
-      <img src="{{cover_art[3]}}" alt="Queen" width="150" height="150" style="position: absolute; left: 300px; top: 550px;">
+      <a href="{{ url_for('lyrics', track=track_id[3])}}">
+      <img src="{{cover_art[3]}}" alt="{{album_names[3]}}" width="150" height="150" style="position: absolute; left: 300px; top: 550px;">
       </a>
       <p1 style="position: absolute; left: 300px; top: 700px">{{song_names[3]}}</p1>
       <p2 style="position: absolute; left: 300px; top: 720px">{{artist_names[3]}}</p2>
 
       <!-- album 5 -->
       <p style="color: black; position: absolute; left: 650px; top: 500px">{{album_names[4]}} </p>
-      <a href="https://en.wikipedia.org/wiki/News_of_the_World_(album)">
-      <img src="{{cover_art[4]}}" alt="Queen" width="150" height="150" style="position: absolute; left: 650px; top: 550px;">
+      <a href="{{ url_for('lyrics', track=track_id[4])}}">
+      <img src="{{cover_art[4]}}" alt="{{album_names[4]}}" width="150" height="150" style="position: absolute; left: 650px; top: 550px;">
       </a>
       <p1 style="position: absolute; left: 650px; top: 700px">{{song_names[4]}}</p1>
       <p2 style="position: absolute; left: 650px; top: 720px">{{artist_names[4]}}</p2>
 
       <!-- album 6 -->
       <p style="color: black; position: absolute; left: 1000px; top: 500px">{{album_names[5]}} </p>
-      <a href="https://en.wikipedia.org/wiki/News_of_the_World_(album)">
-      <img src="{{cover_art[5]}}" alt="Queen" width="150" height="150" style="position: absolute; left: 1000px; top: 550px;">
+      <a href="{{ url_for('lyrics', track=track_id[5])}}">
+      <img src="{{cover_art[5]}}" alt="{{album_names[5]}}" width="150" height="150" style="position: absolute; left: 1000px; top: 550px;">
       </a>
       <p1 style="position: absolute; left: 1000px; top: 700px">{{song_names[5]}}</p1>
       <p2 style="position: absolute; left: 1000px; top: 720px">{{artist_names[5]}}</p2>

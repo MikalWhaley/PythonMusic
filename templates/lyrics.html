@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>Python Music</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	</head>
+	<style>
+		.cover_art {
+    		margin: 20px auto 20px;
+    		display: block;
+    	}
+	</style>
+
+	<body>
+		<div>
+    		<img class="cover_art" src="{{cover}}" alt="{{album}}" />
+		</div>
+		<!-- <img src="{{cover}}"" alt="{{album}}" align="middle" style="margin: 20px; width: 150px; height: 150px"> -->
+		<div class="container-fluid" style="text-align:center; margin: 10px 200px 10px">
+			<!-- <img src="{{cover}}"" alt="{{album}}" style="align-content: center; margin: 20px"> -->
+			<h1>"{{song}}"</h1>
+			<h2>{{artist}}</h2>
+			<h3>{{album}}</h3>
+			<div class="container-fluid" style="text-align:center; margin: 50px 200px 50px">
+				<p> {{lyrics}} </p>
+			</div>
+		</div>
+	</body>
+</html>
