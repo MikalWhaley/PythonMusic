@@ -41,6 +41,17 @@ def my_form_post():
 	global track_id
 	global cover_art
 
+	if len(song_names) != 0:
+		song_names.clear()
+	elif len(album_names) != 0:
+		album_names.clear()
+	elif len(artist_names) != 0:
+		artist_names.clear()
+	elif len(track_id) != 0:
+		track_id.clear()
+	elif len(cover_art) != 0:
+		cover_art.clear()
+
 	# Appends all songs, album, and artist names in separate lists
 	for i in range(len(json_data["message"]["body"]["track_list"])):
 		song_names.append(json_data["message"]["body"]["track_list"][i]["track"]["track_name"])
