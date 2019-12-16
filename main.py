@@ -40,15 +40,19 @@ def my_form_post():
 
 
 	for i in range(len(album_names)):
-		art_Search = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=e88853d03b96eefc3b794d51cbe626ff&artist=" + artist_names[4] + "&album="  + album_names[4] + "&format=json"
+		art_Search = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=e88853d03b96eefc3b794d51cbe626ff&artist=" + artist_names[i] + "&album="  + album_names[i] + "&format=json"
 		cover_response = requests.request("GET", art_Search)
 		data = json.loads(cover_response.text)
 
-		# if(data["message"] == "Album not found"):
-		# 	cover_art.append('/static/placeholder.png')
-		# # 	cover_art.append(data["album"]["image"][3]["#text"])
-		# else:
-		# 	cover_art.append(data["album"]["image"][3]["#text"])
+		if (len(data) == 3):
+			cover_art.append('/static/placeholder.png')
+			# cover_art.append(data["album"]["image"][3]["#text"])
+		elif(data["album"]["image"][3]["#text"] == ""):
+			cover_art.append('/static/placeholder.png')
+		else:
+			cover_art.append(data["album"]["image"][3]["#text"])
+			# cover_art.append('/static/placeholder.png')
+
 
 
 
